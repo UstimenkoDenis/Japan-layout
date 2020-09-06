@@ -54,14 +54,12 @@
 
   };
 
-  const scrollTo = function () {
-    console.log(this)
+  const scrollTo = function () {   
       const links = document.querySelectorAll('.js-scroll');
       links.forEach(each => {
           each.addEventListener('click', function () {
               const currentTarget = this.getAttribute('href');
-              smoothScroll(currentTarget, 1000);
-              console.log(this)
+              smoothScroll(currentTarget, 1000);              
           });
       });
   };
