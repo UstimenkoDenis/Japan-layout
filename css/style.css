@@ -164,7 +164,8 @@ img {
     background: url(../img/intro-bg.jpg) no-repeat center;
     background-size: cover;    
     padding-top: 263px;
-    padding-bottom: 376px;      
+    padding-bottom: 376px; 
+    border: 2px solid white;     
 }
 
 .intro__title {
@@ -245,8 +246,7 @@ img {
     top: 0;
     left:0;
     transform: translateY(-100%);
-    background-color: white ;     
-  
+    background-color: white ;       
 }
 
 .benefits__cards {    
