@@ -14,7 +14,8 @@
 (function () {
   const menu = document.querySelector('.header__nav'),
         burgerItem  = document.querySelector('.burger'),
-        menuCloseItem = document.querySelector('.header__nav-close')
+        menuCloseItem = document.querySelector('.header__nav-close'),
+        headerLinks = document.querySelectorAll('.header__link')
 
   burgerItem.addEventListener('click', () => {
     menu.classList.add('header__nav_active')
@@ -23,6 +24,14 @@
   menuCloseItem.addEventListener('click', () => {
     menu.classList.remove('header__nav_active')
   })
+  if (window.innerWidth <= 767) {
+    headerLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.remove('header__nav_active')
+      })
+    })
+  }
+ 
 
 }());
 
@@ -59,7 +68,7 @@
       links.forEach(each => {
           each.addEventListener('click', function () {
               const currentTarget = this.getAttribute('href');
-              smoothScroll(currentTarget, 1000);              
+              smoothScroll(currentTarget, 1000);                  
           });
       });
   };
